@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Worlwide Disasters | Count per Year</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<div class="responsive-svg-container" id="form">
+		<label for="yearSlider">Year</label>
+		<input id="yearSlider" type="range" value="2020" min="2000" max="2024" oninput="yearText.value=yearSlider.value" />
+		<input id="yearText" type="number" value="2020" min="2000" max="2024" oninput="yearSlider.value=yearText.value" disabled />
+		
+		<label for="sort" style="margin-left:30px">Sort by</label>
+		<select name="sort" id="sort">
+			<option value="cntAsce">Count of disaster, ascending</option>
+			<option value="cntDesc">Count of disaster, descending</option>
+		</select>
+	</div>
+	<div id="bar" class="responsive-svg-container"></div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+	<script src="./script.js"></script>
+</body>
+</html>
